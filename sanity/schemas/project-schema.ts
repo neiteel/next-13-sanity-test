@@ -1,10 +1,16 @@
 import { type } from "os";
+import {defineField} from 'sanity'
 
 const project = {
     name: 'project',
     title: 'Projects',
     type: 'document',
     fields: [
+        defineField({
+            name: 'language',
+            type: 'string',
+            readOnly: true,
+        }),
         {
             name: 'name',
             title: 'Name',

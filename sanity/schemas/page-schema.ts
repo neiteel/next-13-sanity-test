@@ -1,8 +1,15 @@
+import {defineField} from 'sanity'
+
 const page = {
     name: "page",
     title: "Pages",
     type: "document",
     fields: [
+      defineField({
+        name: 'language',
+        type: 'string',
+        readOnly: true,
+      }),  
       {
         name: "title",
         title: "Title",
